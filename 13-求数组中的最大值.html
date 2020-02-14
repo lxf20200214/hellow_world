@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+  /* 求数组中所有数字的最大值 */
+  // var arr = [1,5,7,4,3,9,0];
+  /*
+    思路：
+      把数字两两比较，求出一个更大的，用这个更大的和下一个数字比较
+      把这个过程重复，直到把所有的数字比较完毕
+  */
+  // 1 先把第0个和第1个比较
+  // 声明一个变量，用于保存两个数中的最大值
+  // var max;
+  // if(arr[0] > arr[1]){
+  //   max = arr[0];
+  // }else {
+  //   max = arr[1];
+  // }
+
+  // // 2.再拿着max和后面的每个数字比较
+  // if(max < arr[2]){
+  //   max = arr[2];
+  // }
+
+  // // 3.在拿着max和第3个比较
+  // if(max < arr[3]){
+  //   max = arr[3];
+  // }
+  // ...
+  // if (max < arr[arr.length - 1]){
+  //   max = arr[arr.length - 1];
+  // }
+
+
+
+  var arr = [1, 5, 7, 4, 3, 9, 0,100];
+  // 写成循环
+  var max;
+  if (arr[0] > arr[1]) {
+    max = arr[0];
+  } else {
+    max = arr[1];
+  }
+
+  // 简化
+  // arr[0] > arr[1] ? max = arr[0] : max = arr[1];
+
+  // 简化
+  // var max = arr[0] > arr[1] ? arr[0] : arr[1];
+
+  // 循环从2开始，到length-1结束
+  // for (var i = 2; i <= arr.length - 1; i++) {
+  for (var i = 2; i < arr.length ; i++) {
+    if (max < arr[i]) {
+      max = arr[i];
+    }
+
+    // 简化的写法
+    // max = max < arr[i] ? arr[i] : max;
+  }
+
+  console.log(max);
+
+
+</script>
+
+</html>

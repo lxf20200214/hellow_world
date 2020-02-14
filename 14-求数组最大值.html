@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+/* 有一个数组，求里面的所有数字的最大值 */
+var arr = [100,120,90,87,65,112];
+
+/* 思路2：
+  假设第0个就是最大的，依次的去和每一个比较，如果假设还成立 后面没有比它更大的，就他确实是最大的
+  如果有比它更大的，使用更大者和后面的比较
+*/
+
+// 1. 假设第0个是最大的
+var max = arr[0];
+
+// if(max < arr[1]){
+//   max = arr[1];
+// }
+// if(max < arr[2]){
+//   max = arr[2];
+// }
+// ...
+// if(max < arr[arr.length -1]){
+//   max = arr[arr.length-1];
+// }
+
+// 循环从1开始到length-1结束
+for(var i = 1; i < arr.length; i++){
+  if(max < arr[i]){
+    max = arr[i]
+  }
+  // 简化过的
+  // max = max < arr[i] ? arr[i] : max;
+}
+console.log(max);
+</script>
+
+</html>

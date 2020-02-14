@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+</body>
+<script>
+/*
+  定义(创建)数组
+    字面量
+      []
+    构造函数
+      new Array();
+    两者其实本质是一样的，只不过是不同的写法
+
+  构造函数的方式创建数组的初始化
+    new Array(数据1,数据2,...)
+*/
+// var arr1 = [];
+// var arr2 = new Array();
+// console.log(arr1);
+// console.log(arr2);
+
+
+/* 往里面存东西 */
+// var arr1 = [1,2,3,4];
+// var arr2 = new Array(1,2,3,4);
+// console.log(arr1);
+// console.log(arr2);
+
+
+/* 区别
+  如果是构造函数的方式，不能只单独的给一个数字初始化，如果给了一个单独的数字，它会认为你在设置数组的长度
+*/
+var arr1 = [100]; // 用的多
+console.log(arr1);
+var arr2 = new Array(100); // 少用
+console.log(arr2);
+var arr3 = new Array('abc');
+console.log(arr3);
+</script>
+</html>
